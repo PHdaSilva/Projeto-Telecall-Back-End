@@ -1,0 +1,667 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", Sans-serif;
+    scroll-behavior: smooth;
+}
+
+html{
+    background-image: url("/image/Fundo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    min-height: 100%;
+    background-attachment: fixed;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+:root {
+    --body-color: white;
+    --bnt-color: #4169e1;
+    --bnt-hover-color: blue;
+    --text-color: black;
+    --text-light-color: white;
+    --border-color: #ccc;
+    --bnt-top-color: #cccccc80;
+    --shadow-color: rgba(0, 0, 0, 0.342);
+    --switch-color: #4169e1;
+}
+
+.darkmode{
+    --text-color: white;
+    --body-color: #18191a;
+}
+
+/*-----------------------header-----------------------*/
+
+header{
+    border: 1px solid var(--border-color);
+    height: 70px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--body-color);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 20px;
+    justify-content: space-between;
+    z-index: 999;
+}
+
+.logo-link img{
+    width: 100%;
+    cursor: pointer;
+}
+
+.menu{
+    display: flex;
+    align-items: center;
+    align-content: center;
+}
+
+.menu a{
+    text-decoration: none;
+    color: var(--text-color);
+    display: block;
+    padding: 16px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.menu a:hover{
+    color: var(--bnt-color);
+}
+
+menu a:active{
+    color: var(--bnt-color);
+}
+
+.menu button{
+    color: var(--text-color);
+    cursor: pointer;
+    margin: 5px;
+    border: none;
+    background-color: transparent;
+    text-align: center;
+    font-size: 16px;
+    padding: 16px;
+}
+
+#btnAumentar, #btnDiminuir{
+    padding: 0;
+}
+.sub-menu {
+    float: left;
+}
+
+#icone-sub-menu, #icone-conta{
+    display: none;
+}
+
+.content-sub-menu {
+    display: none;
+    position: absolute;
+    background-color: var(--body-color);
+    border: 1px solid var(--border-color);
+}
+
+#menu-text:hover{
+    color: var(--bnt-color);
+}
+
+.content-sub-menu a{
+    float: none;
+    text-align: left;
+}
+
+.content-sub-menu a:hover{
+    background-color: var(--bnt-color);
+    color: var(--text-light-color);
+}
+  
+
+.sub-menu:hover .content-sub-menu{
+    display: block;
+}
+
+#bnt-mobile{
+    font-size: 30px;
+    display: none;
+    color: var(--text-color);
+    cursor: pointer;
+    margin: 5px;
+    border: none;
+    background-color: var(--body-color);
+}
+
+#logado{
+    display: none;
+}
+
+.logado-content{
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    right: 80px;
+    background-color: var(--body-color);
+    border: 1px solid var(--border-color);
+}
+
+.logado-content p{
+    width: 100%;
+    text-align: center;
+    color: var(--text-color);
+    font-size: 16px;
+    padding: 16px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.logado-content button{
+    color: var(--text-color);
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+}
+
+
+.logado-content button:hover, .logado-content p:hover{
+    background-color: var(--bnt-color);
+    color: var(--text-light-color);
+}
+
+.menu-conta:hover .logado-content{
+    display: flex;
+}
+  
+/*-----------------------header-----------------------*/
+
+/*-----------------------login-----------------------*/
+
+.login{
+    margin-top: 40px;
+    text-align: center;
+    padding: 40px;
+    min-height:100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.login img{
+    width: 100%;
+    max-width: 400px;
+}
+
+.login img:hover{
+    transform: scale(1.1);
+    transition: all 0.7s;
+}
+
+form{
+    background-color: var(--body-color);
+    border: 1px solid var(--border-color);
+    border-radius: 40px;
+    text-align: center;
+    width: 40%;
+    margin: 10px auto;
+    padding: 30px 70px 30px 70px;
+    font-size: 20px;
+    display: block;
+    box-shadow: 2px 2px 1px var(--shadow-color);
+    color: var(--text-color);
+}
+
+form input{
+    width: 95%;
+    height: 30px;
+    padding-left: 10px;
+    padding-right: 10px; 
+    border: 1px solid var(--bnt-color);
+    border-radius: 20px;
+    font-size: 18px;
+    margin: 20px 10px 10px 10px;
+}
+
+form input[type = submit]{
+    background-color: var(--bnt-color);
+    color: var(--text-light-color);
+    height: 40px;
+    cursor: pointer;
+}
+
+form input[type = submit]:hover{
+    background-color: var(--bnt-hover-color);
+    transform: scale(1.1);
+    transition: all 0.5s;
+}
+
+.checkbox{
+    text-align: justify;
+    width: 50%;
+    
+} 
+
+form input[type = checkbox]{
+    width: 20px;
+    height: 14px;
+    border: 1px solid var(--bnt-color);
+    
+}
+
+.inputcontrol {
+    position: relative;
+}
+
+.lado{
+    display: flex;
+    width: 100%;
+    /*border-bottom: 1px solid red;*/
+    padding: 0 5px;
+    margin-top: -20px;
+}
+
+.checkbox label{
+    margin-left: -15px;
+}
+
+#lem-senha{
+    cursor: pointer;
+    display: inline;
+    font-size: 16px;
+}
+
+.limpar{
+    width: 50%;
+    text-align: end;
+    margin-top: -5px;
+}
+
+#bnt-limpar{
+    background: none;
+    border: none;
+    color: var(--text-color);
+    font-size: 16px;
+    cursor: pointer;
+    width: 70px;
+}
+
+.links{
+    font-size: 14px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 20%;
+    margin-top: 20px;
+    justify-content: space-between;
+}
+
+.links a{
+    text-decoration: none;
+    color: var(--bnt-color);
+    font-weight: 400;
+    font-style: italic;
+    border-bottom: 1px solid var(--bnt-color);
+}
+
+/*.switch{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+    margin: 1px auto;
+}*/
+
+/* Estilo básico do switch */
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 125px;
+    height: 30px;
+}
+
+/* Estilização da caixa de fundo */
+.toggle-switch .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 30px;
+}
+
+/* Estilização do círculo deslizante (knob) */
+.toggle-switch .slider:before {
+    position: absolute;
+    content: attr(data-label-off); /* Rótulo inicial (OFF) */
+    height: 26px;
+    width: 70%;
+    line-height: 26px;
+    text-align: center;
+    top: 2px;
+    left: 2px;
+    bottom: 2px;
+    right: 2px;
+    background-color: var(--switch-color);
+    color: var(--text-light-color);
+    transition: 0.4s;
+    border-radius: 30px;
+}
+
+/* Quando o switch estiver marcado (ON) */
+.toggle-switch input:checked + .slider:before {
+    content: attr(data-label-on); /* Rótulo quando está ON */
+    transform: translateX(33px); /* Posição do rótulo ON */
+}
+
+/* Estilização do elemento de entrada (hidden checkbox) - ocultar o checkbox padrão */
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/*-----------------------login-----------------------*/
+
+/*-----------------------RollToTop-----------------------*/
+
+#bnt-top{
+    position: fixed;
+    bottom: 30px;
+    right: 25px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--bnt-top-color);
+    border-radius: 100%;
+    border: none;
+    margin:0;
+    padding: 0;
+    z-index: 999;
+    cursor: pointer;
+    display: none;
+}
+
+#bnt-top img{
+    width: 40px;
+}
+
+/*-----------------------RollToTop-----------------------*/
+
+/*-----------------------Footer-----------------------*/
+
+.footer{
+    background-color: var(--body-color);
+    border: 1px solid var(--border-color);
+    height: auto;
+    display: flex;
+    padding: 40px 0;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--text-color);
+}
+
+.footer h2{
+  font-size: 24px;
+}
+
+.logo-footer{
+    width: 33%;
+}
+
+.logo-footer img{
+    max-width: 280px;
+}
+
+.logo-footer img:hover{
+    transform: scale(1.1);
+    transition: all 0.5s;
+}
+
+.contato{
+    width: 34%;
+}
+
+.contato p{
+    font-size: 16px;
+    padding: 5px;
+}
+
+.redes-sociais{
+    width: 33%;
+}
+
+.redes-sociais i{
+    color: var(--text-color);
+    margin: 30px 10px 0 10px;
+}
+
+.redes-sociais i:hover{
+    transform: scale(1.2);
+    transition: all 0.5s;
+}
+
+.redes-sociais a{
+    text-decoration: none;
+}
+
+footer{
+    text-align: center;
+    padding: 10px;
+    background-color: var(--bnt-color);
+    color: var(--text-light-color);
+}
+
+/*-----------------------Footer-----------------------*/
+
+/*-----------------------Avisos-----------------------*/
+
+.inputcontrol i {
+    position: absolute;
+    top: 30px;
+    right: 0;
+    visibility: hidden;
+    font-size: 18px;
+}
+
+.inputcontrol small {
+    position: absolute;
+    bottom: 40px;
+    left: 10px;
+    visibility: hidden;
+    font-size: 14px;
+}
+
+/*-----------------------Avisos-----------------------*/
+
+/*-----------------------Sucesso/Erro-----------------------*/
+
+.inputcontrol.sucesso input {
+    border-color: #2ecc71;
+}
+  
+.inputcontrol.erro input {
+    border-color: #ef3b47;
+}
+  
+.inputcontrol.sucesso i.fa-check-circle {
+    color: #2ecc71;
+    visibility: visible;
+}
+  
+.inputcontrol.erro i.fa-exclamation-circle {
+    color: #ef3b47;
+    visibility: visible;
+}
+  
+.inputcontrol.erro small {
+    visibility: visible;
+    color: #ef3b47;
+}
+
+/*-----------------------Sucesso/Erro-----------------------*/
+
+@media screen and (max-width: 1024px){
+    
+    header{
+        width: 100%;
+    }
+
+    form{
+        width: 100%;
+        font-size: 18px;
+        padding: 20px;
+    }
+
+    form input{
+        font-size: 16px;
+    }
+
+    .footer{
+        width: 100%;
+        flex-direction: row;
+    }
+
+    footer{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px){
+    
+    header{
+        width: 100%;
+    }
+
+    #bnt-mobile{
+        display: block;
+    }
+
+    .menu{
+        display: none;
+    }
+
+    .menu.active{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background-color: var(--body-color);
+        height: 100vh;
+        border: 1px solid var(--border-color);
+        width: 40%;
+        z-index: 999;
+    }
+
+    #menu-text{
+        border-bottom: 2px solid var(--border-color);
+        width: 100%;
+        margin: 0;
+    }
+
+    #icone-sub-menu{
+        display: block;
+        position: absolute;
+        right: 5px;
+        top: 16px;
+        color: var(--text-color);
+        transform: translateX(0px);
+        animation: float 6s ease-out infinite;
+    }
+
+    #icone-conta{
+        position: absolute;
+        right: 5px;
+        top: 16px;
+        color: var(--text-color);
+        transform: translateX(0px);
+        animation: float 6s ease-out infinite;
+    }
+
+    @keyframes float {
+        0%{
+            transform: translateY(0px);
+        }
+
+        50%{
+            transform: translateY(-5px);
+        }
+
+        100%{
+            transform: translateY(0px);
+        }
+    }
+
+    .sub-menu{
+        width: 100%;
+        position: relative;
+    }
+
+    .content-sub-menu, .logado-content{
+        width: 100%;
+        position: unset;
+        border: unset;
+    }
+
+    .menu a{
+        border-bottom: 2px solid var(--border-color);
+        width: 100%;
+        margin: 0;
+    }
+
+    #bnt-darkmode, #btnAumentar, #btnDiminuir,#logado{
+        border-bottom: 2px solid var(--border-color);
+        width: 100%;
+        margin: 0;
+        padding: 16px;
+    }
+    
+    .menu-conta{
+        width: 100%;
+        position: relative;
+    }
+
+    .logado-content p{
+        border-bottom: 2px solid var(--border-color);
+    }
+    
+    .logado-content button{
+        border-bottom: 2px solid var(--border-color);
+    }
+    
+    form{
+        width: 100%;
+        font-size: 18px;
+        padding: 20px;
+    }
+
+    form input{
+        font-size: 16px;
+    }
+
+    .footer{
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .logo-footer, .contato, .redes-sociais{
+        width: 100%;
+        margin: 10px auto;
+    }
+
+    footer{
+        width: 100%;
+    }
+}

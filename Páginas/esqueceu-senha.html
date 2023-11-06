@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+      <link href="CSS/Style(esq-senha).css" rel="Stylesheet" type="text/css"/>
+      <link rel="icon" href="/image/icone.png" sizes="192x192">
+      <meta name="description" content="" />
+      <script src="/JavaScript/jquery.js" type="text/JavaScript"></script>
+      <script src="/JavaScript/effects.js" type="text/JavaScript"></script>
+      <script src="/JavaScript/login.js" type="text/JavaScript"></script>  
+      <script src="https://kit.fontawesome.com/dac26df030.js" crossorigin="anonymous"></script>
+      <title>Esqueceu senha</title>
+   </head>
+   <body>
+
+      <header>
+         <div class="/-link">
+            <a href="/index.html">
+               <img src="/image/mini-logo.png">
+            </a>
+         </div>
+            <nav>
+               <button id="bnt-mobile" onclick="openmenu()"><i class="fa fa-bars"></i></button>
+               <div class="menu" id="menu">
+                  <div class="sub-menu">
+                     <button id="menu-text" onclick="OpenSubMenu()">Funcionalidades </button>
+                     <i id="icone-sub-menu" class="fa fa-caret-down"></i>
+                     <div class="content-sub-menu" id="content-sub-menu">
+                        <a href="/Páginas/2fa.html">Autenticação de dois fatores</a>
+                        <a href="/Páginas/numero-mascara.html">Número Máscara</a>
+                        <a href="/Páginas/google-chamadas-verificadas.html">Chamadas verificadas do Google</a>
+                        <a href="/Páginas/sms-Programavel.html">SMS Programável</a>
+                     </div>
+                  </div>
+                  <a href="/Páginas/registro.html" id="registrar" >Registre-se</a>
+                  <a href="/Páginas/login.html" id="entrar">Entrar</a>
+                  <div class="menu-conta">
+                     <button id="logado" onclick="OpenMenuConta()"><i class="fa-solid fa-user-large"></i></button>
+                     <i id="icone-conta" class="fa fa-caret-down"></i>
+                     <div class="logado-content" id="logado-content">
+                        <p id="username">username</p>
+                        <button id="sair">Sair Da Conta</button>
+                     </div>
+                  </div>
+                  <button id="bnt-darkmode" onclick="darkmode()"><i class="fa-solid fa-circle-half-stroke"></i></button>
+                  <button id="btnAumentar">A+</button>
+                  <button id="btnDiminuir">A-</button>
+               </div>
+            </nav>
+      </header>
+
+      <section class="esq-senha">
+         <a href="/index.html">
+            <img src="/image/logorecortsm.png" />
+         </a>
+         <form>
+            <div class="info">
+               <h1>Recuperar senha</h1>
+               <p>digite abaixo o e-mail que você usou para registrar-se no Site.</p>
+            </div> <!--info-->
+            <div class="inserir">
+               <input type="email" placeholder="Digite o Seu Email" id="email"/>
+               <input type="button" value="Enviar" />
+            </div> <!--inserir-->
+         </form>
+      </section> <!--esq-senha-->
+
+      <button onclick="backToTop()" id="bnt-top"><i class="fa-solid fa-angles-up"></i></button>
+
+      <section class="footer">
+         <div class="logo-footer">
+             <a href="index.html">
+                <img src="/image/logorecortsm.png">
+             </a>
+          </div> <!--logo-footer-->
+          <div class="contato">
+             <h2> Entre Em Contato</h2>
+                 <p>luidywertuly@souunisuam.com.br</p>
+                 <p>pedrohenriquesilvaalmeida@souunisuam.com.br</p>
+          </div> <!--contato-->
+          <div class="redes-sociais">
+                <h2>Nossas Redes Sociais</h2>
+             <a href="#">
+               <i class="fa-brands fa-instagram fa-2xl"></i>
+             </a>
+             <a href="#">
+                <i class="fa-brands fa-linkedin fa-2xl"></i>
+             </a>
+             <a href="#">
+                <i class="fa-brands fa-github fa-2xl"></i>
+             </a>
+             <a href="#">
+                <i class="fa-brands fa-facebook fa-2xl"></i>
+             </a>
+          </div> <!--redes-sociais-->
+      </section><!--footer-->
+      <footer class="copyright">
+          <p>Copyright © 2023 | Telecall. Todos os direitos reservados.</p>
+      </footer>
+   </body>
+</html>

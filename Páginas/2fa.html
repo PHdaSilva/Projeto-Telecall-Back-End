@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+      <link href="css/Style(2FA).css" rel="Stylesheet"  type="text/css"/>
+      <link rel="icon" href="/image/icone.png" sizes="192x192">
+      <meta name="description" content="" />
+      <script src="/JavaScript/jquery.js" type="text/JavaScript"></script>
+      <script src="/JavaScript/effects.js" type="text/JavaScript"></script>
+      <script src="/JavaScript/login.js" type="text/JavaScript"></script> 
+      <script src="https://kit.fontawesome.com/dac26df030.js" crossorigin="anonymous"></script> 
+      <title>2FA</title>
+   </head>
+   <body>
+
+      <header>
+         <div class="/-link">
+            <a href="/index.html">
+               <img src="/image/mini-logo.png">
+            </a>
+         </div>
+            <nav>
+               <button id="bnt-mobile" onclick="openmenu()"><i class="fa fa-bars"></i></button>
+               <div class="menu" id="menu">
+                  <div class="sub-menu">
+                     <button id="menu-text" onclick="OpenSubMenu()">Funcionalidades </button>
+                     <i id="icone-sub-menu" class="fa fa-caret-down"></i>
+                     <div class="content-sub-menu" id="content-sub-menu">
+                        <a href="/Páginas/2fa.html">Autenticação de dois fatores</a>
+                        <a href="/Páginas/numero-mascara.html">Número Máscara</a>
+                        <a href="/Páginas/google-chamadas-verificadas.html">Chamadas verificadas do Google</a>
+                        <a href="/Páginas/sms-Programavel.html">SMS Programável</a>
+                     </div>
+                  </div>
+                  <a href="/Páginas/registro.html" id="registrar" >Registre-se</a>
+                  <a href="/Páginas/login.html" id="entrar">Entrar</a>
+                  <div class="menu-conta">
+                     <button id="logado" onclick="OpenMenuConta()"><i class="fa-solid fa-user-large"></i></button>
+                     <i id="icone-conta" class="fa fa-caret-down"></i>
+                     <div class="logado-content" id="logado-content">
+                        <p id="username">username</p>
+                        <button id="sair">Sair Da Conta</button>
+                     </div>
+                  </div>
+                  <button id="bnt-darkmode" onclick="darkmode()"><i class="fa-solid fa-circle-half-stroke"></i></button>
+                  <button id="btnAumentar">A+</button>
+                  <button id="btnDiminuir">A-</button>
+               </div>
+            </nav>
+      </header>
+
+      <section class="main">
+         <div class="main-content">
+            <h1>2FA - Autenticação de dois fatores</h1>
+            <p>Amplie e fortaleça a segurança de seu negócio.</p>
+            <a href="/Páginas/Preços.html"><button>Assine já</button></a>
+         </div>
+         <div class="image-main">
+            <img src="/image/2fa-img-semfnd.png" alt=""/>
+         </div>
+      </section> <!--main-->
+
+      <div class="divisor"></div>
+
+      <section class="conteiner">
+         <div class="image">
+            <img src="/image/conteiner-img-removebg.png" alt="" />
+         </div> <!--image-->
+         <div class="content">
+            <h2>O que é?</h2>
+            <h3>Uma melhor segurança para a empresa e seus clientes.</h3>
+            <p>O 2FA é um procedimento de segurança que garante que serão
+               necessários 2 fatores únicos para liberação de uma ação. O
+               primeiro fator é a senha que o usuário Cadastrou e o segundo pode ser
+               autenticado via token, via detecção de impressão digital,
+               reconhecimento facial, código enviado via sms, entre outros.</p>
+         </div> <!--content-->
+      </section> <!--conteiner-->
+
+      <div class="divisor"></div>
+
+       <section class="funciona">
+         <h2>Como funciona o 2FA:</h2>
+         <div class="lado">
+
+            <div class="passo">
+               <img id="img1" src="/image/laptop.png" alt="" />
+               <p>Usuário acessa seu site ou aplicativo e digita a senha cadastrada para entrar em seu perfil ou completar uma transação.</p>
+            </div> <!--passo-->
+
+            <div class="passo">
+               <img id="img2" src="/image/warning.png" alt="" />
+               <p>A Telecall recebe a tentativa de login e solicita que o usuário insira seu número de telefone para autorizar o acesso.</p>
+            </div> <!--passo-->
+
+            <div class="passo">
+               <img id="img3" src="/image/smartphone-pin.png" alt="" />
+               <p>Após inserir seu número, a Telecall envia para o usuário por SMS ou chamada de voz um código PIN de uso único.</p>
+            </div> <!--passo-->
+
+            <div class="passo">
+               <img id="img1" src="/image/laptop2.png" alt="" />
+               <p>O usuário insere o código no site ou aplicativo para concluir o processo de verificação.</p>
+            </div> <!--passo-->
+
+         </div> <!--lado-->
+      </section> <!--funciona-->
+
+      <div class="divisor"></div>
+
+      <section class="funcoes">
+         <div class="content-funcoes">
+            <h2>Principais funções do 2FA:</h2>
+            <ul>
+               <li id="margin"><span>Envie uma senha via SMS, voz ou e-mail para autenticação do usuário.</span></li>
+               <li id="margin"><span>Adicione uma camada extra de segurança além da senha pessoal.</span></li>
+               <li id="margin"><span>Redução casos de fraude e invasões e evite o acesso a dados por invasores.</span></li>
+               <li id="margin"><span>Ofereça segurança aprimorada para seus clientes.</span></li>
+               <li><span>API simples e de rápida implementação.</span></li>
+            </ul>
+         </div>
+            <div class="image-funcoes">
+               <img src="/image/2fa-funcoes.png" alt="" />
+            </div>
+      </section> <!--funcoes-->
+
+      <button onclick="backToTop()" id="bnt-top"><i class="fa-solid fa-angles-up"></i></button>
+
+      <section class="footer">
+         <div class="logo-footer">
+             <a href="index.html">
+                <img src="/image/logorecortsm.png">
+             </a>
+          </div> <!--logo-footer-->
+          <div class="contato">
+             <h2> Entre Em Contato</h2>
+                 <p>luidywertuly@souunisuam.com.br</p>
+                 <p>pedrohenriquesilvaalmeida@souunisuam.com.br</p>
+          </div> <!--contato-->
+          <div class="redes-sociais">
+                <h2>Nossas Redes Sociais</h2>
+             <a href="#">
+               <i class="fa-brands fa-instagram fa-2xl"></i>
+             </a>
+             <a href="#">
+                <i class="fa-brands fa-linkedin fa-2xl"></i>
+             </a>
+             <a href="#">
+                <i class="fa-brands fa-github fa-2xl"></i>
+             </a>
+             <a href="#">
+                <i class="fa-brands fa-facebook fa-2xl"></i>
+             </a>
+          </div> <!--redes-sociais-->
+      </section><!--footer-->
+      <footer class="copyright">
+          <p>Copyright © 2023 | Telecall. Todos os direitos reservados.</p>
+      </footer>
+   </body>
+</html>
